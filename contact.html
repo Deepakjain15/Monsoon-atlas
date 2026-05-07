@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan a Trip | Monsoon Atlas</title>
+  <meta
+    name="description"
+    content="Use the Monsoon Atlas trip planner to estimate a short-trip budget and read common travel FAQs."
+  >
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html" aria-label="Monsoon Atlas home">
+          <span class="brand-mark">M</span>
+          <span>
+            <strong>Monsoon Atlas</strong>
+            <small>Slow travel for curious weekends</small>
+          </span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="journal.html">Journal</a>
+          <a href="contact.html">Plan a Trip</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero page-hero-soft">
+        <div class="container reveal">
+          <p class="eyebrow">Trip Planner</p>
+          <h1>Turn interest into a realistic weekend plan.</h1>
+          <p class="lead narrow">
+            This page demonstrates form design, JavaScript calculations, and user-focused
+            interaction by estimating a travel budget from a few simple inputs.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container planner-grid">
+          <form class="planner-form reveal" id="budget-form">
+            <div class="form-row">
+              <label for="travelers">Number of travelers</label>
+              <input id="travelers" name="travelers" type="number" min="1" max="10" value="2">
+            </div>
+
+            <div class="form-row">
+              <label for="days">Trip duration</label>
+              <select id="days" name="days">
+                <option value="2">2 days</option>
+                <option value="3" selected>3 days</option>
+                <option value="4">4 days</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="stay">Stay style</label>
+              <select id="stay" name="stay">
+                <option value="1200">Budget stay</option>
+                <option value="2200" selected>Comfort stay</option>
+                <option value="3600">Boutique stay</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="mood">Route mood</label>
+              <select id="mood" name="mood">
+                <option value="800">Coast escape</option>
+                <option value="1000" selected>Hill retreat</option>
+                <option value="900">Heritage trail</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="energy">Travel energy</label>
+              <select id="energy" name="energy">
+                <option value="slow" selected>Slow and restful</option>
+                <option value="balanced">Balanced mix</option>
+                <option value="active">Explore more</option>
+              </select>
+            </div>
+
+            <button class="button button-primary" type="submit">Estimate Budget</button>
+          </form>
+
+          <aside class="budget-card reveal" aria-live="polite">
+            <p class="eyebrow">Estimated Budget</p>
+            <h2 id="budget-total">Rs. 9,800</h2>
+            <p id="budget-note">
+              Based on 2 travelers, 3 days, comfort stay, and a hill retreat route.
+            </p>
+            <div class="budget-breakdown">
+              <p><span>Stay</span><strong id="stay-cost">Rs. 6,600</strong></p>
+              <p><span>Travel</span><strong id="travel-cost">Rs. 2,000</strong></p>
+              <p><span>Food and local rides</span><strong id="food-cost">Rs. 1,200</strong></p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <article class="recommendation-card reveal" aria-live="polite">
+            <div>
+              <p class="eyebrow">Smart Recommendation</p>
+              <h2 id="trip-match-title">Coorg Rain Trail</h2>
+            </div>
+            <p id="trip-match-text">
+              Based on your current inputs, a calm hill route gives the best balance of weather,
+              comfort stay value, and relaxed pacing.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-highlight">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Questions</p>
+            <h2>Frequently asked before a short trip.</h2>
+          </div>
+
+          <div class="faq-list">
+            <article class="faq-item reveal">
+              <button class="faq-question" type="button" aria-expanded="false">
+                Is Monsoon Atlas only for rainy-season travel?
+              </button>
+              <div class="faq-answer">
+                <p>
+                  No. The brand name suggests atmosphere, but the routes are useful all year and
+                  the content can be updated seasonally.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item reveal">
+              <button class="faq-question" type="button" aria-expanded="false">
+                Why include a planner instead of a normal contact form?
+              </button>
+              <div class="faq-answer">
+                <p>
+                  A planner adds more learning value because it uses JavaScript to perform a real
+                  interaction, making the website functional and not just informational.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item reveal">
+              <button class="faq-question" type="button" aria-expanded="false">
+                Is the website responsive on mobile screens?
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. The layout changes to single-column sections, the menu becomes a toggle
+                  button, and spacing adjusts for smaller screens.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand brand-footer" href="index.html">
+            <span class="brand-mark">M</span>
+            <span>
+              <strong>Monsoon Atlas</strong>
+              <small>Weekend routes with soul</small>
+            </span>
+          </a>
+          <p>The planner page demonstrates JavaScript form handling, live updates, and route suggestions.</p>
+        </div>
+        <div>
+          <h3>Project</h3>
+          <ul class="footer-links">
+            <li><a href="destinations.html">Compare routes</a></li>
+            <li><a href="journal.html">Read journal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Year</h3>
+          <p class="footer-meta"><span data-year></span></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

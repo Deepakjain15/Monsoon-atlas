@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations | Monsoon Atlas</title>
+  <meta
+    name="description"
+    content="Browse filterable weekend routes by coast, hills, and heritage on Monsoon Atlas."
+  >
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html" aria-label="Monsoon Atlas home">
+          <span class="brand-mark">M</span>
+          <span>
+            <strong>Monsoon Atlas</strong>
+            <small>Slow travel for curious weekends</small>
+          </span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="journal.html">Journal</a>
+          <a href="contact.html">Plan a Trip</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero page-hero-soft">
+        <div class="container reveal">
+          <p class="eyebrow">Destination Board</p>
+          <h1>Choose by mood, not just by map.</h1>
+          <p class="lead narrow">
+            The routes below are grouped into coast, hills, and heritage experiences. Use the
+            filter buttons to focus on the kind of weekend you want.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="weather-board reveal">
+            <div class="weather-board-copy">
+              <p class="eyebrow">Live Weekend Weather</p>
+              <h2>Real forecast data makes the route board feel alive.</h2>
+              <p class="lead narrow">
+                These featured routes load current conditions, temperature range, and rain chance
+                from a public weather API so the recommendation section can react in real time.
+              </p>
+            </div>
+
+            <aside class="weather-summary-card" aria-live="polite">
+              <p class="eyebrow">Smart Pick</p>
+              <h3 id="weather-summary-title">Checking the best weather window...</h3>
+              <p id="weather-summary-text">
+                Forecast data is loading for Coorg, Gokarna, and Mysuru.
+              </p>
+              <button class="button button-secondary" type="button" id="refresh-weather">
+                Refresh Forecast
+              </button>
+            </aside>
+          </div>
+
+          <div class="grid grid-three weather-grid">
+            <article
+              class="weather-card reveal"
+              data-weather-card
+              data-name="Coorg Rain Trail"
+              data-lat="12.3375"
+              data-lon="75.8069"
+            >
+              <p class="trip-tag">Coorg</p>
+              <h3>Live conditions</h3>
+              <p class="weather-status" data-weather-status>Loading forecast...</p>
+              <div class="weather-metrics">
+                <p><span>Current</span><strong data-weather-temp>--</strong></p>
+                <p><span>Today's range</span><strong data-weather-range>--</strong></p>
+                <p><span>Rain chance</span><strong data-weather-rain>--</strong></p>
+                <p><span>Wind</span><strong data-weather-wind>--</strong></p>
+              </div>
+            </article>
+
+            <article
+              class="weather-card reveal"
+              data-weather-card
+              data-name="Gokarna Drift"
+              data-lat="14.5501"
+              data-lon="74.3188"
+            >
+              <p class="trip-tag">Gokarna</p>
+              <h3>Live conditions</h3>
+              <p class="weather-status" data-weather-status>Loading forecast...</p>
+              <div class="weather-metrics">
+                <p><span>Current</span><strong data-weather-temp>--</strong></p>
+                <p><span>Today's range</span><strong data-weather-range>--</strong></p>
+                <p><span>Rain chance</span><strong data-weather-rain>--</strong></p>
+                <p><span>Wind</span><strong data-weather-wind>--</strong></p>
+              </div>
+            </article>
+
+            <article
+              class="weather-card reveal"
+              data-weather-card
+              data-name="Mysuru Afterglow"
+              data-lat="12.2958"
+              data-lon="76.6394"
+            >
+              <p class="trip-tag">Mysuru</p>
+              <h3>Live conditions</h3>
+              <p class="weather-status" data-weather-status>Loading forecast...</p>
+              <div class="weather-metrics">
+                <p><span>Current</span><strong data-weather-temp>--</strong></p>
+                <p><span>Today's range</span><strong data-weather-range>--</strong></p>
+                <p><span>Rain chance</span><strong data-weather-rain>--</strong></p>
+                <p><span>Wind</span><strong data-weather-wind>--</strong></p>
+              </div>
+            </article>
+          </div>
+
+          <div class="filter-row reveal" aria-label="Destination categories">
+            <button class="filter-button active" type="button" data-filter-button="all">All</button>
+            <button class="filter-button" type="button" data-filter-button="coast">Coast</button>
+            <button class="filter-button" type="button" data-filter-button="hills">Hills</button>
+            <button class="filter-button" type="button" data-filter-button="heritage">Heritage</button>
+          </div>
+
+          <div class="grid grid-three destinations-grid">
+            <article class="destination-card reveal" data-category="hills">
+              <span class="trip-tag">Hills</span>
+              <h2>Coorg Rain Trail</h2>
+              <p>3 days | Forest stays | Coffee estate walks</p>
+              <ul class="mini-list">
+                <li>Sunrise viewpoint loop</li>
+                <li>Local Kodava meal stop</li>
+                <li>Easy road trip pacing</li>
+              </ul>
+            </article>
+
+            <article class="destination-card reveal" data-category="coast">
+              <span class="trip-tag">Coast</span>
+              <h2>Gokarna Drift</h2>
+              <p>2 days | Quiet coves | Sunset cafes</p>
+              <ul class="mini-list">
+                <li>Cliff walk between beaches</li>
+                <li>Minimal-cost backpack route</li>
+                <li>Best for close friend groups</li>
+              </ul>
+            </article>
+
+            <article class="destination-card reveal" data-category="heritage">
+              <span class="trip-tag">Heritage</span>
+              <h2>Mysuru Afterglow</h2>
+              <p>2 days | Palace district | Craft markets</p>
+              <ul class="mini-list">
+                <li>Evening city illumination</li>
+                <li>Silk and sandalwood trail</li>
+                <li>Rich local food options</li>
+              </ul>
+            </article>
+
+            <article class="destination-card reveal" data-category="hills">
+              <span class="trip-tag">Hills</span>
+              <h2>Chikmagalur Fold</h2>
+              <p>3 days | Waterfalls | Scenic drives</p>
+              <ul class="mini-list">
+                <li>Short hike combinations</li>
+                <li>Foggy morning cafes</li>
+                <li>Great for photography lovers</li>
+              </ul>
+            </article>
+
+            <article class="destination-card reveal" data-category="coast">
+              <span class="trip-tag">Coast</span>
+              <h2>Udupi Blue Hour</h2>
+              <p>2 days | Temple town | Hidden beaches</p>
+              <ul class="mini-list">
+                <li>Clean family-friendly pacing</li>
+                <li>Seafood and cafe pairing</li>
+                <li>Balanced culture plus leisure</li>
+              </ul>
+            </article>
+
+            <article class="destination-card reveal" data-category="heritage">
+              <span class="trip-tag">Heritage</span>
+              <h2>Hampi Stone Echo</h2>
+              <p>3 days | Ruins | Riverside sunsets</p>
+              <ul class="mini-list">
+                <li>History-focused walking route</li>
+                <li>Cycle-friendly local paths</li>
+                <li>Best in cooler months</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-highlight">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Travel Logic</p>
+            <h2>Simple comparisons help users choose faster.</h2>
+          </div>
+
+          <div class="comparison-grid">
+            <article class="comparison-card reveal">
+              <h3>Low budget</h3>
+              <p>Gokarna Drift and Udupi Blue Hour fit short, affordable weekend plans.</p>
+            </article>
+            <article class="comparison-card reveal">
+              <h3>Nature-heavy</h3>
+              <p>Coorg Rain Trail and Chikmagalur Fold work best for cool weather and green views.</p>
+            </article>
+            <article class="comparison-card reveal">
+              <h3>Culture-first</h3>
+              <p>Mysuru Afterglow and Hampi Stone Echo are best for architecture, craft, and history.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand brand-footer" href="index.html">
+            <span class="brand-mark">M</span>
+            <span>
+              <strong>Monsoon Atlas</strong>
+              <small>Weekend routes with soul</small>
+            </span>
+          </a>
+          <p>A responsive travel website project created for Web Technology Activity 1.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="contact.html">Trip Planner</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Built With</h3>
+          <p>HTML for structure, CSS for design, JavaScript for interaction, and a live forecast API.</p>
+          <p class="footer-meta"><span data-year></span></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
