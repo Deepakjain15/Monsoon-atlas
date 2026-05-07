@@ -55,18 +55,3 @@ Open `index.html` in any modern browser and navigate using the menu.
 
 This project is static, so it is easy to deploy.
 
-### Netlify
-
-- Drag the project folder into Netlify Drop, or connect the repository in Netlify
-- The included `netlify.toml` sets the publish directory to the project root
-
-### Vercel
-
-- Import the project in Vercel, or run `vercel --prod` from the project root
-- The included `vercel.json` keeps deployment simple for a plain multi-page static site
-
-## Presentation Support
-
-- Report draft: `report/REPORT_DRAFT.md`
-- Printable report: `report/submission-report.html`
-- Presentation script and viva questions: `report/PRESENTATION_GUIDE.md`
